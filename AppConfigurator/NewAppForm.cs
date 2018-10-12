@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace AppConfigurator
 {
-    public partial class IntroForm : Form
+    public partial class NewAppForm : Form
     {
-        public IntroForm()
+        public NewAppForm()
         {
             InitializeComponent();
-        }
-
-        private void AddBtn_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
