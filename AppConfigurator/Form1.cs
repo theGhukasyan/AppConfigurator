@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using AppConfigurator.Helpers;
 using System.Windows.Forms;
 
 namespace AppConfigurator
@@ -19,7 +13,7 @@ namespace AppConfigurator
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-
+            ViewHelper.SwitchView(this, new NewAppForm());
         }
     }
 }
