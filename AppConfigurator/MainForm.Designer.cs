@@ -29,22 +29,33 @@
         private void InitializeComponent()
         {
             this.appNameLbl = new System.Windows.Forms.Label();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
             this.SuspendLayout();
             // 
             // appNameLbl
             // 
             this.appNameLbl.AutoSize = true;
+            this.appNameLbl.Font = new System.Drawing.Font("Calibri", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.appNameLbl.Location = new System.Drawing.Point(13, 13);
             this.appNameLbl.Name = "appNameLbl";
-            this.appNameLbl.Size = new System.Drawing.Size(35, 13);
+            this.appNameLbl.Size = new System.Drawing.Size(64, 26);
             this.appNameLbl.TabIndex = 0;
             this.appNameLbl.Text = "label1";
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Location = new System.Drawing.Point(12, 42);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(776, 363);
+            this.tabControl1.TabIndex = 1;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.appNameLbl);
             this.Name = "MainForm";
             this.Text = "MainForm";
@@ -56,5 +67,6 @@
         #endregion
 
         private System.Windows.Forms.Label appNameLbl;
+        private System.Windows.Forms.TabControl tabControl1;
     }
 }

@@ -82,8 +82,7 @@ namespace AppConfigurator
                     ResourceHelper.AddResource(_appName, api.Key, api.Value);
                 }
 
-                ViewHelper.SwitchView(this, new MainForm());
-
+                ViewHelper.SwitchView(this, new MainForm(_appName));
             }
         }
     }
