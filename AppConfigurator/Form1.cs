@@ -31,11 +31,7 @@ namespace AppConfigurator
             var resx =
                 new System.Resources.ResXResourceReader(@".\Resources\Applications.resx");
 
-            string a = "";
-            //foreach (System.Collections.DictionaryEntry item in resx)
-            //    a += item.Key + " ";
-
-            MessageBox.Show(a);
+           
         }
 
         private void AddBtn_Click(object sender, EventArgs e)
