@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using AppConfigurator.Helpers;
 using System.Windows.Forms;
+using System.Collections;
 
 namespace AppConfigurator
 {
@@ -68,7 +69,14 @@ namespace AppConfigurator
             if (confirmResult == DialogResult.Yes)
             {
                 //Adding Application in Applications List
-                ResourceHelper.AddResource("Applications", _appName, _appPath);
+                //        ResourceHelper.AddResource("Applications", _appName, _appPath);
+
+                var item = new Hashtable
+                {
+                    { _appName, _appPath }
+                };
+
+                ResourceHelper.UpdateResourceFile(item, "Applications");
 
                 //Adding Windows Services 
                 foreach (var winService in _windowsServices)
@@ -79,7 +87,7 @@ namespace AppConfigurator
                 //Adding APIs
                 foreach (var api in _APIs)
                 {
-                    ResourceHelper.AddResource(_appName, api.Key, api.Value);
+                    ResourceHelper.AddResource(_appName, api.Key + "API", api.Value);
                 }
 
                 ViewHelper.SwitchView(this, new MainForm(_appName));

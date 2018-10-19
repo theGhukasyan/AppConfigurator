@@ -19,6 +19,23 @@ namespace AppConfigurator
                 }
             }
 
+            bool resourceFileexists = System.IO.Directory.Exists(@".\Resources");
+            bool applicationResxExists = System.IO.File.Exists(@".\Resources\Applications.resx");
+
+            if (!resourceFileexists)
+                System.IO.Directory.CreateDirectory(@".\Resources");
+
+            if (!applicationResxExists)
+                System.IO.File.Create(@".\Resources\Applications.resx");
+
+            var resx =
+                new System.Resources.ResXResourceReader(@".\Resources\Applications.resx");
+
+            string a = "";
+            //foreach (System.Collections.DictionaryEntry item in resx)
+            //    a += item.Key + " ";
+
+            MessageBox.Show(a);
         }
 
         private void AddBtn_Click(object sender, EventArgs e)
