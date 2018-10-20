@@ -25,8 +25,8 @@ namespace AppConfigurator
             if (!resourceFileexists)
                 System.IO.Directory.CreateDirectory(@".\Resources");
 
-            if (!applicationResxExists)
-                System.IO.File.Create(@".\Resources\Applications.resx");
+            //if (!applicationResxExists)
+            //    System.IO.File.Create(@".\Resources\Applications.resx");
 
             var resx =
                 new System.Resources.ResXResourceReader(@".\Resources\Applications.resx");

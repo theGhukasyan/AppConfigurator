@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using AppConfigurator.Helpers;
 using System.Windows.Forms;
-using System.Collections;
 
 namespace AppConfigurator
 {
@@ -11,8 +10,20 @@ namespace AppConfigurator
         private Dictionary<string, string> _APIs;
         private Dictionary<string, string> _windowsServices;
 
-        private string _appName;
-        private string _appPath;
+        private Dictionary<string, string> _application
+        {
+            get
+            {
+                if (ViewHelper.InvalidPair(appNameField.Text, appPathField.Text))
+                    return null;
+                else
+                    return new Dictionary<string, string>()
+                    {
+                        { "name", appNameField.Text},
+                        { "path", appPathField.Text}
+                    };
+            }
+        }
 
         public NewAppForm()
         {
@@ -48,18 +59,7 @@ namespace AppConfigurator
             _APIs.Add(name, path);
         }
 
-        private void appAddBtn_Click(object sender, EventArgs e)
-        {
-            var name = appNameField.Text;
-            var path = appPathField.Text;
-
-            if (ViewHelper.InvalidPair(name, path))
-                return;
-
-            _appName = name;
-            _appPath = path;
-        }
-
+        
         private void saveBtn_Click(object sender, EventArgs e)
         {
             var confirmResult = MessageBox.Show("Are you sure to save and add this application?",
@@ -69,28 +69,27 @@ namespace AppConfigurator
             if (confirmResult == DialogResult.Yes)
             {
                 //Adding Application in Applications List
-                //        ResourceHelper.AddResource("Applications", _appName, _appPath);
-
-                var item = new Hashtable
-                {
-                    { _appName, _appPath }
-                };
-
-                ResourceHelper.UpdateResourceFile(item, "Applications");
+                if(_application != null)
+                    ResourceHelper.AddResource("Applications", _application["name"], _application["path"]);
+                else 
+                 {
+                    MessageBox.Show("Please specify the path of application", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                 }
 
                 //Adding Windows Services 
                 foreach (var winService in _windowsServices)
                 {
-                    ResourceHelper.AddResource(_appName, winService.Key + "WS", winService.Value);
+                    ResourceHelper.AddResource(_application["name"], winService.Key + "WS", winService.Value);
                 }
 
                 //Adding APIs
                 foreach (var api in _APIs)
                 {
-                    ResourceHelper.AddResource(_appName, api.Key + "API", api.Value);
+                    ResourceHelper.AddResource(_application["name"], api.Key + "API", api.Value);
                 }
 
-                ViewHelper.SwitchView(this, new MainForm(_appName));
+                ViewHelper.SwitchView(this, new MainForm(_application["name"]));
             }
         }
     }

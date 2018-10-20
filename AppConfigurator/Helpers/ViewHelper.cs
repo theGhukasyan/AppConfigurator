@@ -20,9 +20,9 @@ namespace AppConfigurator.Helpers
 
         public static bool InvalidPair(string name, string path)
         {
-            if (name == "" && path != "")
+            if (name == "" || name == null || path =="" || path==null)
             {
-                MessageBox.Show("Please provide the name", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please provide correct data", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return true;
             }
             return false;

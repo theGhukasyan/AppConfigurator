@@ -48,7 +48,6 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.appAddBtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.appPathField = new System.Windows.Forms.TextBox();
@@ -226,7 +225,6 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.appAddBtn);
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Controls.Add(this.appPathField);
@@ -234,26 +232,16 @@
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(244, 475);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(445, 225);
+            this.groupBox3.Size = new System.Drawing.Size(445, 154);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Application";
-            // 
-            // appAddBtn
-            // 
-            this.appAddBtn.Location = new System.Drawing.Point(272, 174);
-            this.appAddBtn.Name = "appAddBtn";
-            this.appAddBtn.Size = new System.Drawing.Size(75, 23);
-            this.appAddBtn.TabIndex = 5;
-            this.appAddBtn.Text = "Add";
-            this.appAddBtn.UseVisualStyleBackColor = true;
-            this.appAddBtn.Click += new System.EventHandler(this.appAddBtn_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(309, 112);
+            this.label5.Location = new System.Drawing.Point(309, 91);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(38, 19);
             this.label5.TabIndex = 4;
@@ -263,7 +251,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(300, 41);
+            this.label6.Location = new System.Drawing.Point(300, 20);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(47, 19);
             this.label6.TabIndex = 3;
@@ -271,21 +259,21 @@
             // 
             // appPathField
             // 
-            this.appPathField.Location = new System.Drawing.Point(119, 134);
+            this.appPathField.Location = new System.Drawing.Point(119, 113);
             this.appPathField.Name = "appPathField";
             this.appPathField.Size = new System.Drawing.Size(228, 20);
             this.appPathField.TabIndex = 2;
             // 
             // appNameField
             // 
-            this.appNameField.Location = new System.Drawing.Point(119, 63);
+            this.appNameField.Location = new System.Drawing.Point(119, 42);
             this.appNameField.Name = "appNameField";
             this.appNameField.Size = new System.Drawing.Size(228, 20);
             this.appNameField.TabIndex = 1;
             // 
             // saveBtn
             // 
-            this.saveBtn.Location = new System.Drawing.Point(363, 714);
+            this.saveBtn.Location = new System.Drawing.Point(363, 635);
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(88, 38);
             this.saveBtn.TabIndex = 3;
@@ -295,7 +283,7 @@
             // 
             // cancelBtn
             // 
-            this.cancelBtn.Location = new System.Drawing.Point(509, 714);
+            this.cancelBtn.Location = new System.Drawing.Point(509, 635);
             this.cancelBtn.Name = "cancelBtn";
             this.cancelBtn.Size = new System.Drawing.Size(88, 38);
             this.cancelBtn.TabIndex = 4;
@@ -306,7 +294,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(972, 764);
+            this.ClientSize = new System.Drawing.Size(972, 681);
             this.Controls.Add(this.cancelBtn);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.groupBox3);
@@ -347,7 +335,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button appAddBtn;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox appPathField;
