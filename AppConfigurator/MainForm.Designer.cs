@@ -47,14 +47,14 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 42);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(776, 363);
+            this.tabControl1.Size = new System.Drawing.Size(856, 427);
             this.tabControl1.TabIndex = 1;
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(880, 481);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.appNameLbl);
             this.Name = "MainForm";
